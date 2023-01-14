@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+ </head>
+ <body>
+ <h2>Click Here</h2>
+ <div class="btn-div">
+ <button type="button" onclick="getStudData()">Display Student Details</button>
+ </div>
+ <table id="demo-tab"></table>
+
+ <script>
+ function getStudData() {
+ var xhttpreq = new XMLHttpRequest();
+ xhttpreq.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+ display(this);
+ }
+ }
+ xhttpreq.open("GET", "Student.xml", true);
+ xhttpreq.send();
+ }
+ function display(xml) {
+ var i;
+ var xmlRes = xml.responseXML;
+ var table="<tr> <th>Enrollment ID</th> <th>Name</th> <th>City</th> <th>Branch</th></tr>";
+ var res = xmlRes.getElementsByTagName("STUD");
+ for (i = 0; i <res.length; i++) {
+ table += "<tr><td>" +
+ res[i].getElementsByTagName("ENROLLMENT_ID")[0].childNodes[0].nodeValue +
+ "</td><td>" +
+ res[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+ "</td><td>" +
+ res[i].getElementsByTagName("CITY")[0].childNodes[0].nodeValue +
+ "</td><td>" +
+ res[i].getElementsByTagName("BRANCH")[0].childNodes[0].nodeValue;
+ }
+ document.getElementById("demo-tab").innerHTML = table;
+ }
+ </script>
+
+</body>
+</html>

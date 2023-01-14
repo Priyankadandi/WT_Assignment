@@ -1,0 +1,39 @@
+h2{
+ text-align: center;
+ margin:3%;
+}
+
+.btn-div{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 3%; 
+}
+
+button{
+ font-size: 16px;
+ padding: 20px;
+ border: 2.5px solid rgb(0, 3, 7);
+ background-color: rgb(186, 205, 74);
+ border-radius: 7px;
+}
+
+button:hover{
+ background: rgb(8, 216, 102);
+}
+
+table{
+ margin: 0 auto;
+ border-collapse: collapse;
+ width: 80%;
+}
+
+th, td{
+ border : 1px solid rgb(44, 44, 44);
+ text-align: center;
+ padding: 10px;
+}
+
+tr:nth-child(even){
+ background-color: rgb(245, 255, 217);
+}

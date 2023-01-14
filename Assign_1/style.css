@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    font-family: serif;
+}
+.container{
+    max-width: 60%;
+    word-spacing: 2%;
+}
+#top{
+    color: black;
+    padding-bottom: 2%;
+    background-color: gray;
+    color:white;
+}
+.personal-info{
+    font-size: 14px;
+    justify-content: space-around;
+}
+.personal-info .personal-content{
+    padding: 2% 0;
+}
+i{
+    margin-right: 5px;
+}
+.links .link-content{
+    justify-content: space-around;
+    padding : 0%;
+}
+.links:last-of-type{
+    padding: 2% 0;
+}
+.bottom{
+    justify-content: space-around;
+}
+
+/*Left section*/
+.bottom .left{
+    width: 43%;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-right: 2%;
+    font-weight: 500;
+    word-spacing: 2pt;
+    color: black;
+}
+.profile-section, .project-section{
+    margin: 4%;
+}
+.sub-title{
+    font-size: 17px;
+    color:  gray;
+    font-weight: bold;
+}
+.line{
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 5%;
+    border-top: 3px solid  gray;
+}
+.bottom .profile-section .profile-content{
+    color: rgb(30, 30, 30);
+}
+
+.project-section .list-item,
+.education-section .list-item{
+    color: black;
+    font-weight: bold;
+    margin: 0%;
+}
+.list-item .list-item-abt{
+    font-style: italic;
+    font-weight: 100;
+    color: rgb(89, 88, 88);
+    font-size: 13px;
+}
+.project-content, .achievements-list{
+    color: black;
+    padding: 0px 3px 7px;
+    margin: 8px;
+}
+.interests-list ul li,
+.languages-list ul li{
+    color: black;
+    padding: 0px 2px 5px;
+    margin: 0px;
+}
+
+/*Right section*/
+.bottom .right{
+    width: 40%;
+    margin-left: 7%;
+    margin-top: 3%;
+    font-weight: 500;
+    word-spacing: 2pt;
+}
+/* Education Section*/
+.education-section{
+    margin-bottom: 5%;
+}
+.education-section ul{
+    list-style-type: none;
+    color: black;
+    padding: 0%;
+}
+
+/*Skills section*/
+.skills-section .skill-item{
+    border: 2px solid black;
+    margin: 3%;
+    padding: 2%;
+    text-align: center;
+    border-radius: 5px;
+}
+.skills-section .skill-list{
+    margin: 2% 0 6% 0;
+    padding-left: 2%;
+}
+/*Certificate section*/
+.certificate-section .certificate-list{
+    list-style-type: none;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+}
+.certificate-section .certificate-list li{
+    padding-bottom: 2%;
+}
+.certificate-section .certificate-list li p:first-of-type{
+    font-weight: bold;
+    padding: 0%;
+    margin: 0%;
+}
+.certificate-section .certificate-list li p:last-of-type{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.footer{
+    margin: 3% 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(152, 152, 152);
+}

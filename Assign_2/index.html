@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+    <head>
+	<script>
+		function validate() {
+			var name =
+				document.forms.RegForm.Name.value;
+			var email =
+				document.forms.RegForm.EMail.value;
+			var phone =
+				document.forms.RegForm.Telephone.value;
+			var what =
+				document.forms.RegForm.Subject.value;
+			var password =
+				document.forms.RegForm.Password.value;
+			var address =
+				document.forms.RegForm.Address.value;
+			var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; //Javascript reGex for Email Validation.
+			var regPhone=/^\d{10}$/;									 // Javascript reGex for Phone Number validation.
+			var regName = /\d+$/g;								 // Javascript reGex for Name validation
+
+			if (name == "" || regName.test(name)) {
+				window.alert("Please enter your name properly.");
+				}
+
+			if (address == "") {
+				window.alert("Please enter your address.");
+				}
+			
+			if (email == "" || !regEmail.test(email)) {
+				window.alert("Please enter a valid e-mail address.");
+				}
+			
+			if (password == "") {
+				alert("Please enter your password");
+				}
+
+			if(password.length <6){
+				alert("Password should be atleast 6 character long");
+				}
+			if (phone == "" || !regPhone.test(phone)) {
+				alert("Please enter valid phone number.");
+				}
+
+			if (what.selectedIndex == -1) {
+				alert("Please enter your course.");
+				}
+			if(name!="" &&address!="" && email!="" && password!="" &&phone!=""){
+				alert("Successfully registered !");
+				}
+				
+		}
+	</script>
+	<style>
+	
+  input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+  input[type=password]{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  margin-left:200px;
+  display: inline-block;
+  font-size:18px;
+  font-weight:bold;
+  font-family:Calibri;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+  margin:20px;
+}
+input[type=reset] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin:20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+        </style>
+    </head>
+    <body>
+	<div class="container">
+		<h1 style="text-align: center;">REGISTER HERE !</h1>
+		<form name="RegForm" method="post" onsubmit="validate()"action="map.html">
+			<div class="row">
+				<div class="col-25">
+					<label>Name : </label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="name" name="Name">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label>Address : </label>
+				</div>
+				<div class="col-75">
+					 <input type="text" id="address" name="Address" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label >EMail : </label>
+				</div>
+				<div class="col-75">
+					 <input type="text" id="email" name="EMail" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label>Password : </label>
+				</div>
+				<div class="col-75">
+					 <input type="password" id="password" name="Password" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label>Telephone : </label>
+				</div>
+				<div class="col-75">
+					 <input type="text" id="telephone" name="Telephone" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-25">
+					<label>Course : </label>
+				</div>
+				<div class="col-75">
+					<select type="text" value="" name="Subject">
+						<option>BTECH</option>
+						<option>BBA</option>
+						<option>BCA</option>
+						<option>B.COM</option>
+					</select>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-25">
+					<input type="submit" value="send" name="Submit" >
+
+				</div>
+				<div class="col-75">
+					<input type="reset" value="Reset" name="Reset" >
+				</div>
+			</div>
+			
+		</form>
+		</div>
+
+	</body>
+</html>
+

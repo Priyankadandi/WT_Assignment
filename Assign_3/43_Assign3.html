@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+
+    <style>
+        .msg{
+            color: green;
+            margin-left: 30px;
+            font-size:18px;
+            font-family:Verdana;
+        }
+        input {
+	 padding: 12px 20px;
+	 margin: 10px;
+	 border: 1px solid #ccc;
+	 border-radius: 4px;
+	box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function checkPass(){
+            var txt = document.getElementById("txt1").value;
+            var msg = document.getElementById("msg");
+
+            var len = txt.length;
+            var upper = false;
+            var lower = false;
+            var digit = false;
+            for(let i=0; i<len; i++){
+                var ch = txt.charAt(i);
+	if(ch.toLowerCase() != ch.toUpperCase()){
+                if(ch == ch.toUpperCase()){
+	     console.log(ch)
+                    upper = true;
+                }
+                if(ch == ch.toLowerCase()){
+                    lower = true;
+                }
+}
+                if(ch>=0 && ch<=9){
+                    digit = true;
+                }
+            }
+            //checking
+            if(upper && lower && digit&&len>=8){
+                msg.innerHTML = "Strong";
+            }
+            else{
+                msg.innerHTML = "Weak";
+            }
+        }
+    </script>
+    <form action="#">
+<label style="margin:20px;font-size:18px;color:blue">Enter Password : </label><input type="text" id="txt1" onkeyup="checkPass()" >
+       <span class="msg" id="msg"></span>
+    </form>
+</body>
+</html>
